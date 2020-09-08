@@ -1,0 +1,39 @@
+<h3 style="margin-bottom: 20px;">Following report is based on the feedback given by the volunteers.</h3>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5">
+            <ul class="events">
+                <li *ngFor="let distinctevent of distinctevents" (click)="onSelect(distinctevent)" [class.selected]="distinctevent === selectedEvent">
+
+
+                    <button class="btn btn-lg btn-info dropdown">
+                        <span>{{distinctevent.eventName }}</span> &nbsp; &nbsp; >
+                    </button>
+
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="col-md-7">
+            <!-- <div *ngIf="selectedEvent"> -->
+            <div [hidden]="!selectedEvent">
+                <h2 class="report">
+                    <div>
+                        <div class="barchrt">
+                            <div style="display: block">
+                                <canvas id="canvas"> {{ chart }} </canvas>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 13px;">
+                            <h6>Average Rating: {{avg | number:'1.2-2'}}</h6>
+                        </div>
+                        <!-- <div style="text-align: center; margin-top: 15px;"><h5>{{selectedEvent.eventName}}</h5></div> -->
+
+                    </div>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+microservice/composite service : 
+
+* Web
+* JPA
+* Actuator
+* DevTools
+* Config Client 
+* H2
+
+Eureka server : @EnableEurekaServer @EnableDiscoveryClient
+
+* Actuator
+* DevTools
+* Config Client
+* Eureka Server
+
+Zuul server @EnableZuulProxy
+
+* Actuator
+* Zuul
+* DevTools
+* Eureka Discovery
+
+
+Port list :
+customer-service : 8080
+item-service : 8090
+sales-order-service : 8100
+eureka-server : 8761 (info : eureka default port for registreation 8761)
+zuul-server : 9000

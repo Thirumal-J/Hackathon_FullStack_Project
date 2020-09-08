@@ -1,0 +1,98 @@
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
+    </div>
+    <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+        <h3>Your Feedback is important to us</h3>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <fieldset>
+                    <div>
+                        <p>
+                            <strong>1. How was your experience?</strong>
+                        </p>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="rating" value="1" id="verybad" formControlName="rating">
+                            <label for="verybad" class="smiley smiley1" (click)=toggleSmiley1() data-toggle="tooltip" title="Very Bad!">
+                                <span class="open">
+                                    <img class="img-responsive" src="http://res.cloudinary.com/dxssokt4h/image/upload/v1507184410/dead_tminl7.png" style="width: 56px;height: 56px;">
+                                </span>
+                                <span class="close">
+                                    <img class="img-responsive" src="http://res.cloudinary.com/dxssokt4h/image/upload/v1507184409/dead-active_gcseca.png" style="width: 56px;height: 56px;">
+                                </span>
+                            </label>
+
+
+                            <input type="radio" name="rating" value="2" id="bad" formControlName="rating">
+                            <label for="bad" class="smiley smiley2" (click)=toggleSmiley2() data-toggle="tooltip" title="Bad!">
+                                <span class="open">
+                                    <img class="img-responsive" src="http://res.cloudinary.com/dxssokt4h/image/upload/v1507184410/sad_il7kmb.png" style="width: 56px;height: 56px;">
+                                </span>
+                                <span class="close">
+                                    <img class="img-responsive" src="http://res.cloudinary.com/dxssokt4h/image/upload/v1507184410/sad-active_rhibzn.png" style="width: 56px;height: 56px;">
+                                </span>
+                            </label>
+
+
+                            <input type="radio" name="rating" value="3" id="soso" formControlName="rating">
+                            <label for="soso" class="smiley smiley3" (click)=toggleSmiley3() data-toggle="tooltip" title="So So!">
+
+                                <span class="open">
+                                    <img class="img-responsive" src="http://res.cloudinary.com/dxssokt4h/image/upload/v1507184410/sceptic_we1bxv.png" style="width: 56px;height: 56px;">
+                                </span>
+                                <span class="close">
+                                    <img class="img-responsive" src="http://res.cloudinary.com/dxssokt4h/image/upload/v1507184410/sceptic-active_kez7sa.png"
+                                        style="width: 56px;height: 56px;">
+                                </span>
+                            </label>
+
+                            <input type="radio" name="rating" value="4" id="good" formControlName="rating">
+                            <label for="good" class="smiley smiley4" (click)=toggleSmiley4() data-toggle="tooltip" title="Good!">
+                                <span class="open">
+                                    <img class="img-responsive" src="http://res.cloudinary.com/dxssokt4h/image/upload/v1507184409/happy_kakekm.png" style="width: 56px;height: 56px;">
+                                </span>
+                                <span class="close">
+                                    <img class="img-responsive" src="http://res.cloudinary.com/dxssokt4h/image/upload/v1507184409/happy-active_fs6ztw.png" style="width: 56px;height: 56px;">
+                                </span>
+                            </label>
+
+
+                            <input type="radio" name="rating" value="5" id="verygood" formControlName="rating">
+                            <label for="verygood" class="smiley smiley5" (click)=toggleSmiley5() data-toggle="tooltip" title="Very Good!">
+
+                                <span class="open">
+                                    <img class="img-responsive" src="http://res.cloudinary.com/dxssokt4h/image/upload/v1507184409/more-happy_f53bgi.png" style="width: 56px;height: 56px;">
+                                </span>
+                                <span class="close">
+                                    <img class="img-responsive" src="http://res.cloudinary.com/dxssokt4h/image/upload/v1507184409/more-happy-active_d2hget.png"
+                                        style="width: 56px;height: 56px;">
+                                </span>
+                            </label>
+
+
+                        </div>
+                    </div>
+                </fieldset>
+                <br>
+                <div class="comment_div">
+                    <p>
+                        <strong>2. What did you like about volunteering this event?</strong>
+                    </p>
+                    <textarea rows="2" class="form-group" formControlName="comment1"></textarea>
+                </div>
+                <br>
+                <div class="comment_div">
+                    <p>
+                        <strong>3. What can be improved in this volunteering activity?</strong>
+                    </p>
+                    <textarea rows="2" formControlName="comment2"></textarea>
+                </div>
+
+                <div>
+                    <input type="submit" name="btnSubmit" class="btnContact" value="Submit" />
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

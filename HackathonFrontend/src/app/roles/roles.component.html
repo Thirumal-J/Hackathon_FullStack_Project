@@ -1,0 +1,35 @@
+<div class="card my-5">
+  <div class="card-body">
+    <h2>Event Information</h2>
+    <input class="form-control" id="myInput" (keypress)="filter()" type="text" placeholder="Search for anything.." style="margin-bottom: 8px;">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Empid</th>
+          <th scope="col">EventId</th>
+          <th scope="col">EventName</th>
+          <th scope="col">Location</th>
+          <th scope="col">TriggerMail</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        <tr *ngFor="let event of events">
+          <td>{{ event.id }}</td>
+          <td>{{ event.empName }}</td>
+          <td>{{ event.empId }}</td>
+          <td>{{ event.eventId }}</td>
+          <td>{{ event.eventName }}</td>
+          <td>{{ event.location }}</td>
+          <td>
+            <button class="btn btn-success btn-md" [routerLink]="['/participated', event.empId, event.eventId]" target="_blank">
+              <span>Trigger</span>
+              <i class="material-icons" style="vertical-align: middle">mail_outline</i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
