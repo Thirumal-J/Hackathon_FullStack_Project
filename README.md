@@ -7,4 +7,4 @@ This project is developed as part of a Full-Stack certification learning program
 Technologies Learned:
 1. Java Spring-Boot
 2. Microservices Architecture
-3. Angular
+3. Angular 7
